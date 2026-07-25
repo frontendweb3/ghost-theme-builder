@@ -8,7 +8,7 @@ This repository turns an AI assistant into a Ghost CMS theme development expert.
 
 ## Directory Structure
 
-```
+```bash
 ├── SKILL.md              # Skill entry point — identity, workflow, standards
 ├── docs/                 # Official Ghost theme docs (synced from TryGhost/Docs)
 ├── snippets/             # Reusable Handlebars partials
