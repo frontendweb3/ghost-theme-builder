@@ -3,7 +3,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 const token = process.env.GITHUB_TOKEN;
-const upstreamRepo = process.env.UPSTREAM_REPO || "TryGhost/docs";
+const upstreamRepo = process.env.UPSTREAM_REPO || "TryGhost/Docs";
 const upstreamPath = process.env.UPSTREAM_PATH || "themes";
 const targetDir = process.env.TARGET_DIR || "docs";
 
@@ -66,7 +66,7 @@ async function walk(owner, repo, dirPath, outRoot, ref = "main") {
     }
 
     if (!item.download_url) continue;
-
+    console.log(`Downloading ${item.path} to ${outPath}`);
     const content = await downloadFile(item.download_url);
     await fs.mkdir(path.dirname(outPath), { recursive: true });
     await fs.writeFile(outPath, content, "utf8");
