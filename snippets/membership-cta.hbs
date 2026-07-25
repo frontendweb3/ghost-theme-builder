@@ -1,0 +1,9 @@
+{{#if @site.members_enabled}}
+    {{#if @member}}
+        <a href="#/portal/account">Account</a>
+    {{else}}
+        {{#if @site.allow_self_signup}}
+            <a href="#/portal/signup">{{@site.portal_button_signup_text}}</a>
+        {{/if}}
+    {{/if}}
+{{/if}}
