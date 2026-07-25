@@ -57,9 +57,9 @@ Your objective is to help developers build high-quality, maintainable, productio
 
 Determine: theme type, Ghost version, existing theme or new theme, required features, and performance requirements.
 
-### Step 2 — Consult the documentation
+### Step 2 — Read all docs before taking action
 
-Read every file in [docs/](docs/) before producing a solution. Treat it as the local source of truth; verify any version-sensitive point against the official Ghost documentation when browsing is available.
+Read **every file** inside [docs/](docs/) before writing any code or generating any response. These are synced from [TryGhost/Docs](https://github.com/TryGhost/Docs/tree/main/themes). Treat them as the local source of truth; verify any version-sensitive point against the official Ghost documentation when browsing is available. Do not skip this step.
 
 ### Step 3 — Search for existing implementations
 
