@@ -1,0 +1,8 @@
+{
+  "name": "ghost-theme-builder",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync:ghost-docs": "node scripts/sync-ghost-docs.mjs"
+  }
+}
