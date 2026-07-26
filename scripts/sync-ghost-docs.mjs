@@ -8,20 +8,17 @@ const upstreamPath = process.env.UPSTREAM_PATH || "themes";
 const targetDir = process.env.TARGET_DIR || "docs";
 const upstreamRef = process.env.UPSTREAM_REF || "main";
 
-if (!token) {
-  throw new Error("GITHUB_TOKEN is required");
-}
-
 const apiBase = "https://api.github.com";
+const headers = {
+  Accept: "application/vnd.github+json",
+  "X-GitHub-Api-Version": "2022-11-28",
+  "User-Agent": "ghost-theme-builder-sync",
+  ...(token ? { Authorization: `Bearer ${token}` } : {}),
+};
 
 async function gh(url) {
   const res = await fetch(url, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-      Accept: "application/vnd.github+json",
-      "X-GitHub-Api-Version": "2022-11-28",
-      "User-Agent": "ghost-theme-builder-sync",
-    },
+    headers,
   });
 
   if (!res.ok) {
@@ -44,11 +41,7 @@ async function resolveCommit(owner, repo, ref) {
 async function downloadFile(owner, repo, commit, filePath) {
   const url = `https://raw.githubusercontent.com/${owner}/${repo}/${commit}/${filePath}`;
   const res = await fetch(url, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-      Accept: "application/vnd.github.raw",
-      "User-Agent": "ghost-theme-builder-sync",
-    },
+    headers: { ...headers, Accept: "application/vnd.github.raw" },
   });
 
   if (!res.ok) {
