@@ -2,8 +2,6 @@
   "upstream_repo": "TryGhost/Docs",
   "upstream_path": "themes",
   "upstream_ref": "main",
-  "upstream_commit": null,
-  "synced_at": null,
-  "status": "unknown",
-  "note": "Run pnpm sync:ghost-docs with GITHUB_TOKEN to create a pinned documentation snapshot."
+  "upstream_commit": "2edc245c4a8785e7955996e66263933579b3a7f7",
+  "synced_at": "2026-07-26T10:00:46.785Z"
 }
