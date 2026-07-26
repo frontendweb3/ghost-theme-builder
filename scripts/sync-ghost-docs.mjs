@@ -58,7 +58,8 @@ async function walk(owner, repo, dirPath, outRoot, ref, commit) {
 
   for (const item of items) {
     const rel = item.path;
-    const outPath = path.join(outRoot, rel.slice(upstreamPath.length + 1));
+    const localPath = rel.slice(upstreamPath.length + 1).replace(/\.mdx$/, ".md");
+    const outPath = path.join(outRoot, localPath);
 
     if (item.type === "dir") {
       await walk(owner, repo, item.path, outRoot, ref, commit);

@@ -13,15 +13,15 @@ Search `examples/` and `snippets/` for the requested feature before writing code
 
 Read only the references relevant to the task:
 
-- Theme structure or validation: `docs/structure.mdx` and `docs/gscan.mdx`
-- Template selection or data scope: `reference/contexts.mdx`, then the matching file in `docs/contexts/`
-- Handlebars helpers: `reference/helpers.mdx`, then the exact helper file in `docs/helpers/`
-- Responsive images and assets: `docs/responsive-images.mdx`
-- Custom theme settings: `docs/custom-settings.mdx`
-- Memberships, Portal, comments, or paid content: `docs/members.mdx`
-- Search or sharing: `docs/search.mdx` or `docs/share.mdx`
-- Custom URLs, collections, channels, or redirects: `docs/routing.mdx`
-- Rich editor cards and content styling: `docs/content.mdx`
+- Theme structure or validation: `docs/structure.md` and `docs/gscan.md`
+- Template selection or data scope: `reference/contexts.md`, then the matching file in `docs/contexts/`
+- Handlebars helpers: `reference/helpers.md`, then the exact helper file in `docs/helpers/`
+- Responsive images and assets: `docs/responsive-images.md`
+- Custom theme settings: `docs/custom-settings.md`
+- Memberships, Portal, comments, or paid content: `docs/members.md`
+- Search or sharing: `docs/search.md` or `docs/share.md`
+- Custom URLs, collections, channels, or redirects: `docs/routing.md`
+- Rich editor cards and content styling: `docs/content.md`
 
 Read `docs/.source.json` before relying on a version-sensitive local reference. Treat the local snapshot as the default source and verify a version-sensitive point against official Ghost documentation when browsing is available.
 
