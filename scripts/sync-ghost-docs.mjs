@@ -6,6 +6,7 @@ const token = process.env.GITHUB_TOKEN;
 const upstreamRepo = process.env.UPSTREAM_REPO || "TryGhost/Docs";
 const upstreamPath = process.env.UPSTREAM_PATH || "themes";
 const targetDir = process.env.TARGET_DIR || "docs";
+const upstreamRef = process.env.UPSTREAM_REF || "main";
 
 if (!token) {
   throw new Error("GITHUB_TOKEN is required");
@@ -30,13 +31,19 @@ async function gh(url) {
   return res.json();
 }
 
-async function listDir(owner, repo, dirPath, ref = "main") {
+async function listDir(owner, repo, dirPath, ref) {
   const url = `${apiBase}/repos/${owner}/${repo}/contents/${dirPath}?ref=${encodeURIComponent(ref)}`;
   return gh(url);
 }
 
-async function downloadFile(downloadUrl) {
-  const res = await fetch(downloadUrl, {
+async function resolveCommit(owner, repo, ref) {
+  const commit = await gh(`${apiBase}/repos/${owner}/${repo}/commits/${encodeURIComponent(ref)}`);
+  return commit.sha;
+}
+
+async function downloadFile(owner, repo, commit, filePath) {
+  const url = `https://raw.githubusercontent.com/${owner}/${repo}/${commit}/${filePath}`;
+  const res = await fetch(url, {
     headers: {
       Authorization: `Bearer ${token}`,
       Accept: "application/vnd.github.raw",
@@ -51,7 +58,7 @@ async function downloadFile(downloadUrl) {
   return res.text();
 }
 
-async function walk(owner, repo, dirPath, outRoot, ref = "main") {
+async function walk(owner, repo, dirPath, outRoot, ref, commit) {
   const items = await listDir(owner, repo, dirPath, ref);
 
   if (!Array.isArray(items)) return;
@@ -61,13 +68,12 @@ async function walk(owner, repo, dirPath, outRoot, ref = "main") {
     const outPath = path.join(outRoot, rel.slice(upstreamPath.length + 1));
 
     if (item.type === "dir") {
-      await walk(owner, repo, item.path, outRoot, ref);
+      await walk(owner, repo, item.path, outRoot, ref, commit);
       continue;
     }
 
-    if (!item.download_url) continue;
     console.log(`Downloading ${item.path} to ${outPath}`);
-    const content = await downloadFile(item.download_url);
+    const content = await downloadFile(owner, repo, commit, item.path);
     await fs.mkdir(path.dirname(outPath), { recursive: true });
     await fs.writeFile(outPath, content, "utf8");
     console.log(`Updated ${outPath}`);
@@ -80,9 +86,41 @@ async function main() {
     throw new Error(`Invalid UPSTREAM_REPO: ${upstreamRepo}`);
   }
 
-  await fs.mkdir(targetDir, { recursive: true });
-  await walk(owner, repo, upstreamPath, targetDir, "main");
-  console.log("Sync complete");
+  const commit = await resolveCommit(owner, repo, upstreamRef);
+  const targetPath = path.resolve(targetDir);
+  const parentDir = path.dirname(targetPath);
+  const tempDir = await fs.mkdtemp(path.join(parentDir, ".ghost-docs-"));
+  const backupDir = `${targetPath}.previous`;
+
+  try {
+    await walk(owner, repo, upstreamPath, tempDir, upstreamRef, commit);
+    await fs.writeFile(path.join(tempDir, ".source.json"), `${JSON.stringify({
+      upstream_repo: upstreamRepo,
+      upstream_path: upstreamPath,
+      upstream_ref: upstreamRef,
+      upstream_commit: commit,
+      synced_at: new Date().toISOString(),
+    }, null, 2)}\n`);
+
+    await fs.rm(backupDir, { recursive: true, force: true });
+    try {
+      await fs.rename(targetPath, backupDir);
+    } catch (error) {
+      if (error.code !== "ENOENT") throw error;
+    }
+
+    try {
+      await fs.rename(tempDir, targetPath);
+    } catch (error) {
+      await fs.rename(backupDir, targetPath).catch(() => {});
+      throw error;
+    }
+
+    await fs.rm(backupDir, { recursive: true, force: true });
+    console.log(`Sync complete at ${commit}`);
+  } finally {
+    await fs.rm(tempDir, { recursive: true, force: true });
+  }
 }
 
 main().catch((err) => {

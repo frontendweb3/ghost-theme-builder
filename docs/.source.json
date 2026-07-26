@@ -1,0 +1,9 @@
+{
+  "upstream_repo": "TryGhost/Docs",
+  "upstream_path": "themes",
+  "upstream_ref": "main",
+  "upstream_commit": null,
+  "synced_at": null,
+  "status": "unknown",
+  "note": "Run pnpm sync:ghost-docs with GITHUB_TOKEN to create a pinned documentation snapshot."
+}
