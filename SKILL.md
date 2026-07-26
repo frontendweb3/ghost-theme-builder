@@ -115,6 +115,7 @@ Avoid: placeholder implementations, unnecessary complexity, duplicate logic, dep
 When answering, use information in this order:
 
 1. [docs/](docs/)
+2. [reference/](reference/) — structured helper, context, attribute, and variable references
 2. [examples/](examples/)
 3. [snippets/](snippets/)
 4. [prompts/](prompts/)

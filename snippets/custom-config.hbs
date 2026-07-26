@@ -1,0 +1,28 @@
+{{!-- Custom theme settings from package.json --}}
+
+{{!-- Select setting --}}
+{{#match @custom.feed_layout "Dynamic grid"}}
+    <div class="feed-grid">{{{body}}}</div>
+{{/match}}
+
+{{!-- Boolean setting --}}
+{{#if @custom.recent_posts}}
+    <section class="recent-posts">...</section>
+{{/if}}
+
+{{!-- Color setting --}}
+<style>
+    :root {
+        {{#if @custom.button_color}}
+        --button-bg: {{@custom.button_color}};
+        {{/if}}
+    }
+</style>
+
+{{!-- Text setting --}}
+{{#if @custom.cta_text}}
+    <a href="#/portal/signup">{{@custom.cta_text}}</a>
+{{/if}}
+
+{{!-- Image setting --}}
+<img src="{{img_url @custom.cta_background_image size="l"}}" alt="">
