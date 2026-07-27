@@ -1,0 +1,17 @@
+# Ignore Node.js package metadata
+package.json
+
+# Ignore package lockfiles
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Ignore dependency folders
+node_modules/
+
+# Ignore build outputs or logs
+dist/
+*.log
+
+<!-- ignore files -->
+scripts/
