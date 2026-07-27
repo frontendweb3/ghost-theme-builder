@@ -31,16 +31,30 @@ This repository turns an AI assistant into a Ghost CMS theme development expert.
 └── README.md
 ```
 
+## Install
+
+Install the skill from the [ClawHub registry](https://clawhub.ai/frontendweb/skills/ghost-theme-builder):
+
+```bash
+# via OpenClaw
+openclaw skills install @frontendweb/ghost-theme-builder
+
+# or via npx
+npx skills add https://clawhub.ai/frontendweb/skills/ghost-theme-builder
+```
+
 ## Usage
 
 ### As an AI skill
 
-Place this folder in your AI platform's skills directory:
+Once installed, the skill loads automatically when you ask the AI to build, review, or debug a Ghost theme. It follows the workflow in `SKILL.md`.
 
-- **opencode**: `~/.config/opencode/skills/`
-- **Claude**: `~/.claude/skills/`
+Supported platforms:
 
-When you ask the AI to build, review, or debug a Ghost theme, it loads this skill and follows the workflow in `SKILL.md`.
+| Platform | Skill directory |
+|---|---|
+| **opencode** | `~/.config/opencode/skills/ghost-theme-builder/SKILL.md` |
+| **Claude** | `~/.claude/skills/ghost-theme-builder/SKILL.md` |
 
 ### Manual reference
 
