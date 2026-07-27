@@ -19,12 +19,10 @@ By default,`{{comments}}`outputs a title and comment count. These elements, alon
 
 ## Attributes
 
-| Name         | Description                               | Options              | Default                                                        |
-| ------------ | ----------------------------------------- | -------------------- | -------------------------------------------------------------- |
-| `title`      | Header text for comment section           | Any string           | Member discussion                                              |
-| `count`      | Boolean to toggle comment count on or off | `true` or `false`    | `true`                                                         |
-| `mode`       | Set light or dark mode for comments       | auto, light, or dark | auto (determined by the parent element's CSS `color` property) |
-| `saturation` | Set saturation of avatar background color | `number`             | `60`                                                           |
+- **Name**: `title`, **Description**: Header text for comment section, **Options**: Any string, **Default**: Member discussion
+- **Name**: `count`, **Description**: Boolean to toggle comment count on or off, **Options**: `true` or `false`, **Default**: `true`
+- **Name**: `mode`, **Description**: Set light or dark mode for comments, **Options**: auto, light, or dark, **Default**: auto (determined by the parent element's CSS `color` property)
+- **Name**: `saturation`, **Description**: Set saturation of avatar background color, **Options**: `number`, **Default**: `60`
 
 ### Example with attributes
 
@@ -39,13 +37,11 @@ Use`{{comment_count}}` to output the number of comments a post has. This option 
 
 ### Attributes
 
-| Name       | Description                               | Options               | Default                                        |
-| ---------- | ----------------------------------------- | --------------------- | ---------------------------------------------- |
-| `singular` | The singular name for a comment           | Any string            | comment                                        |
-| `plural`   | The plural name for comments              | Any string            | comments                                       |
-| `empty`    | What to output when there are no comments | Any string            | Output is empty when comment count equals zero |
-| `autowrap` | Wraps comment count in an HTML tag        | `HTML tag` or `false` | `span`                                         |
-| `class`    | Add a custom class to wrapper element     | Any string            | ""                                             |
+- **Name**: `singular`, **Description**: The singular name for a comment, **Options**: Any string, **Default**: comment
+- **Name**: `plural`, **Description**: The plural name for comments, **Options**: Any string, **Default**: comments
+- **Name**: `empty`, **Description**: What to output when there are no comments, **Options**: Any string, **Default**: Output is empty when comment count equals zero
+- **Name**: `autowrap`, **Description**: Wraps comment count in an HTML tag, **Options**: `HTML tag` or `false`, **Default**: `span`
+- **Name**: `class`, **Description**: Add a custom class to wrapper element, **Options**: Any string, **Default**: ""
 
 ### Examples
 

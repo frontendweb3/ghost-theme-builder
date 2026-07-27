@@ -2,6 +2,9 @@
   "name": "ghost-theme-builder",
   "private": true,
   "type": "module",
+  "dependencies": {
+    "@icyjoseph/mdx2md": "^0.2.0"
+  },
   "scripts": {
     "sync:ghost-docs": "node scripts/sync-ghost-docs.mjs",
     "check:sync-script": "node --check scripts/sync-ghost-docs.mjs"

@@ -5,7 +5,6 @@ description: 'Usage: `{{reading_time}}`'
 
 ***
 
-
 `{{reading_time}}` renders the estimated reading time for a post.
 
 The helper counts the words in the post and calculates an average reading time of 275 words per minute. For the first image present, 12s is added, for the second 11s is added, for the third 10, and so on. From the tenth image onwards every image adds 3s.

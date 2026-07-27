@@ -55,7 +55,6 @@ The specific implementation required for making images wider than their containe
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at interdum ipsum.</p>
 
-
     <figure class="kg-image-card kg-width-full">
       <img class="kg-image" src="https://casper.ghost.org/v1.25.0/images/koenig-demo-2.jpg" width="1600" height="2400" loading="lazy" srcset="..." sizes="...">
       <figcaption>A full-width image</figcaption>

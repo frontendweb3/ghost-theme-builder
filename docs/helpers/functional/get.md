@@ -5,7 +5,6 @@ description: 'Usage: `{{#get "posts"}}{{/get}}`'
 
 ***
 
-
 `{{#get}}` is a special block helper that makes a custom query to the Ghost API to fetch publicly available data. These requests are made server-side before your templates are rendered. This means you can fetch additional data, separate from what is provided by [default in each context](/themes/contexts/).
 
 In its most basic form, the `{{#get}}` helper performs a “browse” query that creates a block of data that represents a list of your **posts**, **authors**, **tags**, or **tiers**. Use the `{{#foreach}}` helper to iterate over this block of data.
@@ -73,10 +72,7 @@ The first parameter passed in is the name of the resource you want to query. Ava
 
 As with the `{{#foreach}}` helper, use block parameters to rename your returned data collection to make it easier to reference or more distinguishable.
 
-<Note>
-Block parameters are entered between pipe symbols (`|`)
-
-</Note>
+> Block parameters are entered between pipe symbols (`|`)
 
 The `{{#get}}` helper supports two parameters. The first entry refers to your returned data collection. The second entry refers to your [pagination object](/themes/helpers/utility/pagination/).
 
@@ -188,10 +184,7 @@ Include option for *Author* and *Tag*
 
 * “count.posts” – adds the post count for each resource
 
-<Note>
-Use `count.posts` to **order** your collection.
-
-</Note>
+> Use `count.posts` to **order** your collection.
 
 Include options for *Tiers*
 
@@ -311,10 +304,7 @@ When passing `title`, `dates`, or other values with spaces to `filter`–wrap th
 {{/post}}
 ```
 
-<Note>
-Tip: To filter based on dates, use the data attributes, e.g.`{{published_at}}`, not the `{{date}}` helper, as helper functions do not get called inside of a filter.
-
-</Note>
+> Tip: To filter based on dates, use the data attributes, e.g.`{{published_at}}`, not the `{{date}}` helper, as helper functions do not get called inside of a filter.
 
 #### Filtering by primary tag
 

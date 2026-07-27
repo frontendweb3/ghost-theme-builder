@@ -5,7 +5,6 @@ description: 'Usage: `{{post_class}}`'
 
 ***
 
-
 `{{post_class}}` outputs classes intended for your post container, useful for targeting posts with styles.
 
 The classes are as follows:

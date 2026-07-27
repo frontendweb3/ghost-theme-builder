@@ -50,7 +50,6 @@ When outputting the author attributes, use a block expression (`{{#author}}{{/au
 - **meta_title** -  SEO title metadata for the author page.
 - **meta_description** -  SEO description metadata for the author page.
 
-
 ### Post list
 
 Each of the posts can be looped through using `{{#foreach posts}}{{/foreach}}`. The template code inside the block will be rendered for each post, and have access to all of the post object attributes.

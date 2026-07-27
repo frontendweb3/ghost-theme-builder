@@ -3,7 +3,7 @@
 Variables available inside `{{#foreach}}` loops.
 
 | Variable | Type | Description |
-|----------|------|-------------|
+| ---------- | ------ | ------------- |
 | `@index` | number | The 0-based index of the current iteration |
 | `@number` | number | The 1-based index of the current iteration |
 | `@key` | string | The object key when iterating over an object |

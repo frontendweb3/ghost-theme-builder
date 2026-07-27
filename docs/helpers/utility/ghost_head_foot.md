@@ -5,7 +5,6 @@ description: 'Usage: `{{ghost_head}}` and `{{ghost_foot}}`'
 
 ***
 
-
 These helpers output vital system information at the top and bottom of the document, and provide hooks to inject additional scripts and styles.
 
 ### ghost\_head

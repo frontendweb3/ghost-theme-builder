@@ -5,7 +5,6 @@ description: 'Usage: `{{excerpt}}`'
 
 ***
 
-
 `{{excerpt}}` outputs content but strips all HTML. This is useful for creating excerpts of posts.
 
 If the post’s `custom_excerpt` property is set, then the helper will always output the `custom_excerpt` content ignoring the `words` & `characters` attributes.

@@ -5,9 +5,7 @@ description: Ghost has a native search feature that can be accessed via URL or i
 
 ***
 
-<Frame>
-  <img src="/images/fe3de440-search-in-ghost_huac1f49fc436e5098ff1c22395a576ebf_186857_1074x0_resize_q100_h2_box_3.webp" />
-</Frame>
+<img src="/images/fe3de440-search-in-ghost_huac1f49fc436e5098ff1c22395a576ebf_186857_1074x0_resize_q100_h2_box_3.webp" />
 
 The easiest way to get started with search is by adding a `#/search` URL to the navigation or anywhere on the site. Beyond that, it’s also possible to implement search directly into a theme using a data attribute.
 

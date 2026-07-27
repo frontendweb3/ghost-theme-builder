@@ -5,7 +5,6 @@ description: 'Usage: `{{img_url value}}`'
 
 ***
 
-
 The img url helper outputs the correctly calculated URL for the provided image property.
 
 You **must** tell the `{{img_url}}` helper which image you would like to output. For example, to output a URL for a post’s feature image inside of post.hbs, use `{{img_url feature_image}}`.

@@ -69,9 +69,7 @@ The key given to each setting is used as the display name in Ghost Admin, and as
 
 In this example, the `"cta_text"` key is displayed to site owners as **CTA Text** and can be referenced in Handlebars templates using `@custom.cta_text`.
 
-<Frame>
-  <img src="/images/0b4d2770-setting-type-text_hu878685915f7c6b65155992b4a20a3eac_25477_1644x0_resize_q100_h2_box_3.webp" />
-</Frame>
+<img src="/images/0b4d2770-setting-type-text_hu878685915f7c6b65155992b4a20a3eac_25477_1644x0_resize_q100_h2_box_3.webp" />
 
 Setting keys must be all lowercase with no special characters and in `snake_case` where each space is represented by an `_`.
 
@@ -85,9 +83,7 @@ Theme settings fall under the **Theme** tab in **Design & branding**, and are gr
 * Homepage
 * Post
 
-<Frame>
-  <img src="/images/2b088467-setting-groups_hu9b3d4ebb234056755f3680e4fdc54d1b_2122069_4096x0_resize_q100_h2_box_3.webp" />
-</Frame>
+<img src="/images/2b088467-setting-groups_hu9b3d4ebb234056755f3680e4fdc54d1b_2122069_4096x0_resize_q100_h2_box_3.webp" />
 
 By default, all custom settings appear in the **Site wide** category. Custom settings that are specific to the homepage or post display are defined with an optional `"group"` property with the value `"homepage"` or `"post"`.
 
@@ -151,9 +147,7 @@ Select settings are used to offer site owners multiple predefined options in com
 {{/match}}
 ```
 
-<Frame>
-  <img src="/images/66561604-setting-type-select_hu66e48d0a12b84f5270a886c24dc079fa_5437_1876x0_resize_q100_h2_box_3.webp" />
-</Frame>
+<img src="/images/66561604-setting-type-select_hu66e48d0a12b84f5270a886c24dc079fa_5437_1876x0_resize_q100_h2_box_3.webp" />
 
 #### Validation
 
@@ -171,9 +165,7 @@ Presents a checkbox toggle.
 }
 ```
 
-<Frame>
-  <img src="/images/5a2f53fd-setting-type-boolean_hu2ded47e2af98aad7bab23dbc5e0941ba_19117_1644x0_resize_q100_h2_box_3.webp" />
-</Frame>
+<img src="/images/5a2f53fd-setting-type-boolean_hu2ded47e2af98aad7bab23dbc5e0941ba_19117_1644x0_resize_q100_h2_box_3.webp" />
 
 #### Validation
 
@@ -198,9 +190,7 @@ Presents a color picker.
 }
 ```
 
-<Frame>
-  <img src="/images/e14f81a0-setting-type-color_hue94a37f604d47f4aebf527f78c55a34e_28164_1644x0_resize_q100_h2_box_3.webp" />
-</Frame>
+<img src="/images/e14f81a0-setting-type-color_hue94a37f604d47f4aebf527f78c55a34e_28164_1644x0_resize_q100_h2_box_3.webp" />
 
 #### Validation
 
@@ -228,9 +218,7 @@ Presents an image uploader. When output in themes, the value will be blank or a 
 }
 ```
 
-<Frame>
-  <img src="/images/b5f2629f-setting-type-image_huefef4eb9ddaf1abc8b7f625866424bc8_24847_1644x0_resize_q100_h2_box_3.webp" />
-</Frame>
+<img src="/images/b5f2629f-setting-type-image_huefef4eb9ddaf1abc8b7f625866424bc8_24847_1644x0_resize_q100_h2_box_3.webp" />
 
 #### Validation
 
@@ -258,9 +246,7 @@ Presents a text input. The value may be blank or free-form text.
 }
 ```
 
-<Frame>
-  <img src="/images/0b4d2770-setting-type-text_hu878685915f7c6b65155992b4a20a3eac_25477_1644x0_resize_q100_h2_box_3.webp" />
-</Frame>
+<img src="/images/0b4d2770-setting-type-text_hu878685915f7c6b65155992b4a20a3eac_25477_1644x0_resize_q100_h2_box_3.webp" />
 
 #### Validation
 
@@ -370,9 +356,7 @@ In this example, the `show_images_in_feed` setting is only visible when `post_fe
 
 Custom fonts allow users to select heading and body fonts for their themes from a curated list. This provides the user with a broad range of font styles so your theme can appeal to a wider audience.
 
-<Frame>
-  <img src="/images/dd51dba9-custom-fonts_hue91cf81b8a9b6eaec2ca5d2661927ae4_1137163_2000x0_resize_q100_h2_box_3.webp" />
-</Frame>
+<img src="/images/dd51dba9-custom-fonts_hue91cf81b8a9b6eaec2ca5d2661927ae4_1137163_2000x0_resize_q100_h2_box_3.webp" />
 
 If you’d like to give users the possibility to select custom fonts, you’ll need make sure your theme supports it.
 

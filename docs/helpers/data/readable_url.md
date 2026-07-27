@@ -5,7 +5,6 @@ description: 'Usage: `{{readable_url URL}}`'
 
 ***
 
-
 The `readable_url` helper outputs a human-readable URL by stripping out its protocol, www, query paramters, and hash fragments. It doesn’t strip out any subdomains or pathnames. This helper pairs well with the [`recommendations` helper](/themes/helpers/data/recommendations) to output more readable URLs.
 
 See the examples below to understand the helper’s expected output:

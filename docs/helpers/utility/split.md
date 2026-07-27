@@ -38,7 +38,6 @@ hello<br> world
 
 `{{split}}` is designed for strings. If it receives a non-string, it attempts to convert it to a string first.
 
-
 ## The separator attribute
 
 By default, strings are split at each ",". The `separator=""` attribute allows settings the split location to an arbitrary value.
@@ -46,7 +45,6 @@ By default, strings are split at each ",". The `separator=""` attribute allows s
 Passing an empty string for the separator results in splitting to single characters.
 
 Separators may be multiple characters.
-
 
 ### Additional examples
 
@@ -79,7 +77,6 @@ from-my-slug
    {{> tag-loop slug=this}}
 {{/foreach}}
 ```
-
 
 ### No empty strings
 Split filters the array to exclude any empty strings from the final result.  Sequential separators will not result in empty strings.

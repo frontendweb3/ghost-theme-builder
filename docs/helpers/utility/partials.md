@@ -5,7 +5,6 @@ description: 'Usage: `{{> "partial-name"}}`'
 
 ***
 
-
 `{{> "partials"}}` is a helper for reusing chunks of template code in handlebars files. This can be useful for any repeating elements, such as a post card design, or for splitting out components like a header for easier to manage template files.
 
 All partials are stored in the `partials/` directory of the theme. Partials will inherit context and make that context available within the partial file.

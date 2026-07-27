@@ -5,7 +5,6 @@ description: 'Usage: `{{encode value}}`'
 
 ***
 
-
 `{{encode}}` is a simple output helper which will encode a given string so that it can be used in a URL.
 
 The most obvious example of where this is useful is shown in Casper’s `post.hbs`, for outputting a twitter share link:

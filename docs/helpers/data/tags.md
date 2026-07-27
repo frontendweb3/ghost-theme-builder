@@ -5,7 +5,6 @@ description: 'Usage: `{{tags}}` or `{{#foreach tags}}{{/foreach}}` in `tag.hbs` 
 
 ***
 
-
 `{{tags}}` is a formatting helper for outputting a linked list of tags for a particular post. It defaults to a comma-separated list (without list markup) but can be customised to use different separators, and the linking can be disabled. The tags are output in the order they appear on the post, these can be reordered by dragging and dropping.
 
 The `{{tags}}` helper does not output internal tags. This can be changed by passing a different value to the `visibility` attribute.

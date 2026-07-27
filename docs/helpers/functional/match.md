@@ -5,11 +5,9 @@ description: 'Usage: `{{#match @custom.color_scheme "=" "Dark"}} class="dark-mod
 
 ***
 
-
 `{{#match}}` allows for simple comparisons, and executing different template blocks depending on the outcome.
 
 Like all block helpers, `{{#match}}` supports adding an `{{else}}` block or using `^` instead of `#` for negation - this means that the `{{#match}}` and `{{else}}` blocks are reversed if you use `{{^match}}` and `{{else}}` instead. In addition, it is possible to do `{{else match ...}}`, to chain together multiple options like a switch statement.
-
 
 ### Example usage
 
@@ -39,7 +37,6 @@ Match supports the following operators
 * `~` - contains
 * `~^` - starts with
 * `~$` - ends with
-
 
 ### Equality
 

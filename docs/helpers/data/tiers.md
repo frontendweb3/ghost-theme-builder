@@ -5,7 +5,6 @@ description: "Usage: `{{tiers}}`/ `{{tiers prefix=\":\" separator=\" - \" lastSe
 
 ***
 
-
 `{{tiers}}`is a formatting helper for outputting tier names. It defaults to a comma-separated list with `and` as the last separator and `tier(s)` as the suffix. Customize the helper by using a custom prefix, separator, last separator, and/or suffix. Note that values are white-space sensitive.
 
 ### Example code

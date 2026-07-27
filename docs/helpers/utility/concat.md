@@ -5,7 +5,6 @@ description: 'Usage: `{{concat "a" "b" "c"}}`'
 
 ***
 
-
 The `{{concat}}` helper is designed to concatenate and link multiple things together.
 
 The `{{concat}}` helper will take all of the items passed to it, treat them as strings, and concatenate them together without any spaces. There can be an unlimited amount of items passed to the helper.

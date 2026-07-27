@@ -5,7 +5,6 @@ description: 'Usage: `{{{block "section"}}}` and `{{#contentFor "section"}} cont
 
 ***
 
-
 `{{{block "block-name"}}}` is a helper for creating a placeholder within a custom handlebars template. Adding the helper along with a unique ID creates a slot within the template, which can be optionally filled when the template is inherited by another template file.
 
 The `{{#contentFor "block-name"}}...{{/contentFor}}` helper is used to access and populate the block definitions within the template that’s being inherited. The inherited template is referenced with `{{!< template-name}}` at the top of the file. If the `contentFor` is not used then the block will be gracefully skipped.

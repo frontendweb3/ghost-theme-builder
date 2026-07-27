@@ -3,7 +3,7 @@
 Reference for Ghost CMS utility helpers.
 
 | Helper | Usage | Definition | Attributes |
-|--------|-------|------------|------------|
+| -------- | ------- | ------------ | ------------ |
 | asset | `{{asset "css/style.css"}}` | Outputs cacheable, cache-busting URLs to assets | hasMinFile |
 | block | `{{{block "name"}}}` | Creates a placeholder for child template content | — |
 | contentFor | `{{#contentFor "name"}}...{{/contentFor}}` | Adds content to a block placeholder | — |

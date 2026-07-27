@@ -5,7 +5,6 @@ description: 'Usage: `{{price plan}}`'
 
 ***
 
-
 The `{{price}}` helper formats monetary values from their smallest denomination to a human readable denomination with currency formatting. Example:
 
 ```handlebars

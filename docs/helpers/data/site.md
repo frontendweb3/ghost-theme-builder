@@ -89,6 +89,4 @@ The `@site` helper provides more extensive attributes around site metadata as we
 
 Here’s how these helpers correspond with the settings in the Ghost admin:
 
-<Frame>
-  <img src="/images/4e85d8e6-site-meta-settings_hubfec6e8b851ef54ba239915a235e7831_581483_1894x0_resize_q100_h2_box.webp" />
-</Frame>
+<img src="/images/4e85d8e6-site-meta-settings_hubfec6e8b851ef54ba239915a235e7831_581483_1894x0_resize_q100_h2_box.webp" />

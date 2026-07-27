@@ -5,7 +5,6 @@ Usage: '`{{authors}}`'
 
 ***
 
-
 `{{authors}}` is a formatting helper for outputting a linked list of authors for a particular post. It defaults to a comma-separated list (without list markup) but can be customised to use different separators, and the linking can be disabled. The authors are output in the order they appear on the post, these can be reordered by dragging and dropping.
 
 You can use the [translation helper](/themes/helpers/utility/translate/) for the `prefix` and `suffix` attribute.

@@ -5,7 +5,6 @@ description: 'Usage: `{{pagination}}`'
 
 ***
 
-
 `{{pagination}}` is a template driven helper which outputs HTML for ’newer posts’ and ‘older posts’ links if they are available and also says which page you are on.
 
 You can override the HTML output by the pagination helper by placing a file called `pagination.hbs` inside of `content/themes/your-theme/partials`. Details of the default template are below.

@@ -5,7 +5,7 @@ Reference for Ghost helper attributes and their usage.
 ## @config
 
 | Attribute | Usage | Definition |
-|-----------|-------|------------|
+| ----------- | ------- | ------------ |
 | posts_per_page | `@config.posts_per_page` | The number of posts per page as defined in `package.json` |
 | image_sizes | `@config.image_sizes` | Responsive image sizes as defined in `package.json` |
 | card_assets | `@config.card_assets` | Configure the card CSS and JS Ghost includes in `package.json` |
@@ -13,7 +13,7 @@ Reference for Ghost helper attributes and their usage.
 ## {{#foreach}} and {{#get}} attributes
 
 | Attribute | Usage | Definition |
-|-----------|-------|------------|
+| ----------- | ------- | ------------ |
 | limit | `limit="3"` | Specifies a number of items to get |
 | from | `from="3"` | Changes the starting point from which items are output |
 | to | `to="8"` | Limits the number of items output |
@@ -25,7 +25,7 @@ Reference for Ghost helper attributes and their usage.
 ## @site attributes
 
 | Attribute | Usage | Definition |
-|-----------|-------|------------|
+| ----------- | ------- | ------------ |
 | description | `{{@site.description}}` | Site description from General settings |
 | icon | `{{@site.icon}}` | Publication icon from Design > Brand settings |
 | logo | `{{@site.logo}}` | Publication logo from Design > Brand settings |

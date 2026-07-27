@@ -7,7 +7,6 @@ description: 'Usage: `{{#unless featured}}{{/unless}}`'
 
 The `{{#unless}}` block helper comes built in with Handlebars.
 
-
 `{{#unless}}` is essentially the opposite of `{{#if}}`. If you want to test a negative conditional only, i.e. if you only need the `{{else}}` part of an `{{#if}}` statement, then `{{#unless}}` is what you need.
 
 It works exactly the same as `{{#if}}` and supports both `{{else}}` and `^` negation if you want to get really confusing!

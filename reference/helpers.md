@@ -3,7 +3,7 @@
 Reference for Ghost CMS data helpers.
 
 | Helper | Usage | Attributes | Variables |
-|--------|-------|------------|-----------|
+| -------- | ------- | ------------ | ----------- |
 | config | `@config.posts_per_page` | posts_per_page, image_sizes, card_assets, custom | — |
 | custom | `@custom.property` | — | — |
 | site | `@site.property` | url, title, description, icon, logo, cover_image, twitter, facebook, navigation, timezone, locale, signup_url, members_enabled, members_invite_only, paid_members_enabled, meta_title, meta_description, twitter_image, twitter_title, twitter_description, og_title, og_description | — |

@@ -5,7 +5,6 @@ description: 'Usage: `{{#link href="/about/"}}About{{/link}}`'
 
 ***
 
-
 `{{#link}}` is a block helper that creates links with dynamic classes. In its basic form it will create an anchor element that wraps around any kind of string, HTML or handlebars constructed HTML.
 
 With additional options it can have an active `class` or `target` behaviour, or `onclick` JavaScript events. A `href` attribute must be included or an error will be thrown.

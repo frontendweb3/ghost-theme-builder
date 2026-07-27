@@ -5,7 +5,6 @@ description: 'Usage: `{{social_url type="platform"}}` (e.g., `{{social_url type=
 
 ***
 
-
 The `{{social_url}}` helper generates a URL for a specified social media platform based on the provided platform type. It takes a single argument, `type`, which specifies the social media platform (e.g., `facebook`, `mastodon`, etc.).
 
 When called inside an author scope (e.g. `{{#author}}` or `{{#foreach authors}}`), the helper looks up the platform on the current author first, then falls back to the sitewide value from `@site`. Outside an author scope, it reads directly from `@site`. If neither has a value, the helper outputs nothing.

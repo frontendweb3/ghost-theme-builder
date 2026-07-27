@@ -5,7 +5,6 @@ description: 'Usage: `{{total_members}}`'
 
 ***
 
-
 The total\_members helper outputs a rounded number of total members from your Ghost publication in a human readable format. Example:
 
 ```handlebars

@@ -5,7 +5,6 @@ description: 'Usage: `{{navigation}}` and `{{navigation type="secondary"}}`'
 
 ***
 
-
 `{{navigation}}` is a template-driven helper which outputs formatted HTML of menu items defined in the Ghost admin panel (Settings > Design > Navigation). By default, the navigation is marked up using a [preset template](https://github.com/TryGhost/Ghost/blob/3d989eba2371235d41468f7699a08e46fc2b1e87/ghost/core/core/frontend/helpers/tpl/navigation.hbs).
 
 There are two types of navigation, primary and secondary, which you can access using `{{navigation}}` and `{{navigation type="secondary"}}`.

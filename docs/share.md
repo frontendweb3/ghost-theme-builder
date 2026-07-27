@@ -6,9 +6,7 @@ Ghost includes a native share modal that lets readers share posts to social plat
 
 ---
 
-<Frame>
-  ![Native Share Buttons](/images/native-share-buttons.png)
-</Frame>
+![Native Share Buttons](/images/native-share-buttons.png)
 
 ## How it works
 

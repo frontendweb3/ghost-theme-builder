@@ -205,8 +205,6 @@ Returning to the earlier example, all of the posts within Ghost here are divided
 * **Post URLs:** `site.com/podcast/my-episode/`
 * **Contains posts with:** a `primary_tag` of `podcast`
 
-
-
 The `primary_tag` property is simply the *first* tag that is entered in the tag list inside Ghost’s editor. It’s useful to filter against the **primary** tag because it will always be unique.
 
 If posts match the filter property for *multiple* collections this can lead to problems with post rendering and collection pagination, so it’s important to try and always keep collection filters unique from one another.
@@ -363,22 +361,18 @@ All you need is a computed view of a subsection of existing content
 * **You want to be able to update/change properties without affecting post URLs**\
   *eg. quickly creating/destroying new sections of a site without any risk*
 
-
-
 If you’re still not sure which is the best fit for you, drop by the [Ghost Forums](https://forum.ghost.org) and share what structure you’re hoping to accomplish. There’s a large community of Ghost developers around to help.
 
 ## Index of all available properties
 
-| Property       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `template`     | Determines which Handlebars template file will be used for this route. Defaults to `index.hbs` if not specified.                                                                                                                                                                                                                                                                                                                                                             |
-| `permalink`    | The generated URL for any post within a collection. Can contain dynamic variables based on post data:<br/>• `{id}` - unique set of characters, eg. `5982d807bcf38100194efd67`<br/>• `{slug}` - the post slug, eg. `my-post`<br/>• `{year}` - publication year, eg. `2019`<br/>• `{month}` - publication month, eg. `04`<br/>• `{day}` - publication day, eg. `29`<br/>• `{primary_tag}` - slug of first tag listed in the post, eg. `news`<br/>• `{primary_author}` - slug of first author, eg. `cameron` |
-| `filter`       | Extensively filter posts returned in collections and channels using the full power and syntax of the [Ghost Content API](/content-api/filtering/#syntax-reference) For example `author:cameron+tag:news` will return all posts published by Cameron, tagged with ‘News’. Mix and match to suit.                                                                                                                                                                                          |
-| `order`        | Choose any number of fields and sort orders for your content:<br/>• `published_at desc` - *default*, newest post first<br/>• `published_at asc` - chronological, oldest first<br/>• `featured desc, published_at desc` - featured posts, then normal posts, newest first                                                                                                                                                                                                                  |
-| `data`         | Fetch & associate data from the Ghost API with a specified route. The source route of the data will be redirected to the new custom route.<br/>• `post.slug` - get data with => `{{#post}}`<br/>• `page.slug` - get data with => `{{#page}}`<br/>• `tag.slug` - get data with => `{{#tag}}`<br/>• `author.slug` - get data with => `{{#author}}`                                                                                                                                              |
-| `rss`          | Collections and channels come with automatically generated RSS feeds which can be disabled by setting the `rss` property to `false`                                                                                                                                                                                                                                                                                                                                          |
-| `content_type` | Specify the mime-type for the current route, default: `HTML`                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `controller`   | Add a custom controller to a route to perform additional functions. Currently the only supported value is `channel`                                                                                                                                                                                                                                                                                                                                                          |
+- **Property**: `template`, **Description**: Determines which Handlebars template file will be used for this route. Defaults to `index.hbs` if not specified.
+- **Property**: `permalink`, **Description**: The generated URL for any post within a collection. Can contain dynamic variables based on post data:<br/>• `{id}` - unique set of characters, eg. `5982d807bcf38100194efd67`<br/>• `{slug}` - the post slug, eg. `my-post`<br/>• `{year}` - publication year, eg. `2019`<br/>• `{month}` - publication month, eg. `04`<br/>• `{day}` - publication day, eg. `29`<br/>• `{primary_tag}` - slug of first tag listed in the post, eg. `news`<br/>• `{primary_author}` - slug of first author, eg. `cameron`
+- **Property**: `filter`, **Description**: Extensively filter posts returned in collections and channels using the full power and syntax of the [Ghost Content API](/content-api/filtering/#syntax-reference) For example `author:cameron+tag:news` will return all posts published by Cameron, tagged with ‘News’. Mix and match to suit.
+- **Property**: `order`, **Description**: Choose any number of fields and sort orders for your content:<br/>• `published_at desc` - *default*, newest post first<br/>• `published_at asc` - chronological, oldest first<br/>• `featured desc, published_at desc` - featured posts, then normal posts, newest first
+- **Property**: `data`, **Description**: Fetch & associate data from the Ghost API with a specified route. The source route of the data will be redirected to the new custom route.<br/>• `post.slug` - get data with => `{{#post}}`<br/>• `page.slug` - get data with => `{{#page}}`<br/>• `tag.slug` - get data with => `{{#tag}}`<br/>• `author.slug` - get data with => `{{#author}}`
+- **Property**: `rss`, **Description**: Collections and channels come with automatically generated RSS feeds which can be disabled by setting the `rss` property to `false`
+- **Property**: `content_type`, **Description**: Specify the mime-type for the current route, default: `HTML`
+- **Property**: `controller`, **Description**: Add a custom controller to a route to perform additional functions. Currently the only supported value is `channel`
 
 ## Redirects
 
@@ -386,10 +380,7 @@ In addition to creating routes, you can also create redirects for any time there
 
 ### Accessing the redirects file
 
-<Note>
-If you’ve updated your site from an earlier version (prior to 4.0), your redirects may be in JSON format. Both formats are still supported, but JSON support will be removed in a later version.
-
-</Note>
+> If you’ve updated your site from an earlier version (prior to 4.0), your redirects may be in JSON format. Both formats are still supported, but JSON support will be removed in a later version.
 
 The `redirects.yaml` file is located in `content/data/redirects.yaml` and - like `routes.yaml` - can also be downloaded/uploaded in the settings in Ghost Admin.
 

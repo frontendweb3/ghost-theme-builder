@@ -5,7 +5,6 @@ description: 'Usage: `{{log value}}`'
 
 ***
 
-
 When running Ghost in development mode, you can use the `{{log}}` helper to output debug messages to the server console. In particular you can get handlebars to output the details of objects or the current context
 
 For example, to output the full ‘context’ that handlebars currently has access to:

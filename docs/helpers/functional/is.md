@@ -5,8 +5,6 @@ description: 'Usage: `{{#is "contexts"}}`'
 
 ***
 
-
-
 The `{{#is}}` helper allows you to check the context of the current route, i.e. is this the home page, or a post, or a tag listing page. This is useful when using shared partials or layouts, to output slightly different context in different places on your theme.
 
 ### Usage

@@ -7,8 +7,6 @@ description: 'Usage: `{{#if featured}}{{/if}}`'
 
 The `{{#if}}` block helper comes built in with Handlebars.
 
-
-
 `{{#if}}` allows for testing very simple conditionals, and executing different template blocks depending on the outcome.
 
 The conditionals that can be tested are very simple, essentially only checking for ’truthiness’. The evaluation rules are explained in the section below.

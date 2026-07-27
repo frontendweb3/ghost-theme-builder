@@ -5,7 +5,6 @@ description: 'Usage: `{{#post}}{{/post}}` or `{{#foreach posts}}{{/foreach}}`'
 
 ***
 
-
 When on a single post template such as `post.hbs` or `page.hbs`, outputting the details of your posts can be done with a block expression.
 
 The block expression `{{#post}}{{/post}}` isn’t strictly a ‘helper’. You can do this with any object in a template to access the nested attributes e.g. you can also use `{{#primary_author}}{{/primary_author}}` inside of the post block to get to the primary author’s name and other attributes.

@@ -6,4 +6,17 @@ settings:
 
 importers:
 
-  .: {}
+  .:
+    dependencies:
+      '@icyjoseph/mdx2md':
+        specifier: ^0.2.0
+        version: 0.2.0
+
+packages:
+
+  '@icyjoseph/mdx2md@0.2.0':
+    resolution: {integrity: sha512-KNF3mrrE7ZbZGkrjt0wZZpbladQ++LUzlewWXHHpFnjwrVW8gBppFzHXAfyYy+F3vrN7wjTKQNyM9tQS4XRExQ==}
+
+snapshots:
+
+  '@icyjoseph/mdx2md@0.2.0': {}

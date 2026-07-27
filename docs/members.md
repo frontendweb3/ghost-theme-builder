@@ -7,9 +7,7 @@ description: "The Members feature allows you to turn any site into a membership 
 
 Members can be activated using any theme by using the Portal feature — an embeddable memberships feature that can be enabled and customised from the Admin UI. Portal screens can also be accessed in your theme via URLs or data attributes.
 
-<Frame>
-  ![](/images/324b141a-portal-links-admin_hu72ea77dfe2902b5b8f1e717e5c1c751c_474136_2376x0_resize_q100_h2_box_3.webp)
-</Frame>
+![](/images/324b141a-portal-links-admin_hu72ea77dfe2902b5b8f1e717e5c1c751c_474136_2376x0_resize_q100_h2_box_3.webp)
 
 Portal links can use absolute or relative links, for example:
 
@@ -242,9 +240,7 @@ This setting is applied in the Admin UI as the [post access level](https://ghost
 
 With the `{{content}}` helper, visitors who don’t have access to a post (determined by the `access` property) will see a default call to action in the content area instead, prompting users to upgrade their subscription. Used in conjunction with a free public preview in post content, the CTA will be displayed after the free preview.
 
-<Frame>
-  ![](/images/2d462c05-content-cta_hu3d640371aa932b7b360881a3df965f9b_54918_1462x0_resize_q100_h2_box_3.webp)
-</Frame>
+![](/images/2d462c05-content-cta_hu3d640371aa932b7b360881a3df965f9b_54918_1462x0_resize_q100_h2_box_3.webp)
 
 The default CTA can be overridden by providing a `./partials/content-cta.hbs` template file in your theme. The default content CTA [provided by Ghost](https://github.com/TryGhost/Ghost/blob/3d989eba2371235d41468f7699a08e46fc2b1e87/ghost/core/core/frontend/helpers/tpl/content-cta.hbs) may be used as a reference.
 
@@ -357,9 +353,7 @@ Once Stripe is properly configured, it’s possible to direct visitors to a Stri
 
 It’s possible to expose information about a member in a Ghost theme to allow members to manage their own subscriptions, or update their details when logged in.
 
-<Frame>
-  ![](/images/4f101771-theme-account-example_hua1cc91f659d30ed537e78ceeee649a6e_60374_800x0_resize_q100_h2_box_3.webp)
-</Frame>
+![](/images/4f101771-theme-account-example_hua1cc91f659d30ed537e78ceeee649a6e_60374_800x0_resize_q100_h2_box_3.webp)
 
 ### Member attributes
 

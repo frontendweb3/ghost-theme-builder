@@ -5,7 +5,6 @@ description: 'Usage: `{{total_paid_members}}`'
 
 ***
 
-
 The total\_paid\_members helper outputs a rounded number of total paid members from your Ghost publication in a human readable format. Example:
 
 ```handlebars
