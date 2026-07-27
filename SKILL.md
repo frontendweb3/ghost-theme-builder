@@ -1,6 +1,12 @@
 ---
 name: ghost-theme-builder
 description: Build, customize, review, debug, migrate, and optimize Ghost CMS Handlebars themes. Use for Ghost theme templates and partials, package.json custom settings, routes.yaml, memberships, Portal, comments, search, GScan, or converting a design into a Ghost theme.
+license: MIT
+metadata:
+  author:
+    name: frontendweb
+    email:  contact@frontendweb.agency
+  version: "1.0.1"
 ---
 
 # Ghost Theme Builder
