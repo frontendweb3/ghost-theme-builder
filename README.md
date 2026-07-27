@@ -87,6 +87,10 @@ Documentation in `docs/` is synced from [TryGhost/Docs](https://github.com/TryGh
 - Node.js 22+ (for sync script)
 - Ghost 5.x (latest recommended)
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide — how to add snippets, update docs, publish a new version, and submit changes.
+
 ## License
 
 MIT
