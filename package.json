@@ -7,6 +7,8 @@
   },
   "scripts": {
     "sync:ghost-docs": "node scripts/sync-ghost-docs.mjs",
-    "check:sync-script": "node --check scripts/sync-ghost-docs.mjs"
+    "check:sync-script": "node --check scripts/sync-ghost-docs.mjs",
+    "publish": "clawhub publish . --slug ghost-theme-builder --version 1.0.2 --owner @frontendweb",
+    "test": "clawhub publish . --slug ghost-theme-builder --version 1.0.2 --owner @frontendweb --dry-run"
   }
 }
