@@ -1,7 +1,7 @@
 {
   "name": "ghost-theme-builder",
   "version": "1.0.4",
-  "private": true,
+  "private": false,
   "type": "module",
   "dependencies": {
     "@icyjoseph/mdx2md": "^0.2.0"
