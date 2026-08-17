@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: write
 
     steps:
       - name: Checkout current repo
@@ -38,14 +39,18 @@ jobs:
           UPSTREAM_PATH: themes
           TARGET_DIR: docs
 
-      - name: Commit changes
+      - name: Commit changes, update package.json, and trigger publish
         run: |
           if git diff --quiet; then
             echo "No changes to commit"
             exit 0
           fi
+          pnpm version patch --no-git-tag-version
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs
-          git commit -m "chore: sync Ghost theme docs"
+          git add docs package.json
+          git commit -m "chore: sync Ghost theme docs and bump version"
           git push origin main
+          gh workflow run publish.yml --ref main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
