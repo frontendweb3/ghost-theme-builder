@@ -10,6 +10,9 @@ const upstreamPath = process.env.UPSTREAM_PATH || "themes";
 const targetDir = process.env.TARGET_DIR || "docs";
 const upstreamRef = process.env.UPSTREAM_REF || "main";
 
+console.log(`Syncing Ghost docs from ${upstreamRepo}:${upstreamRef}/${upstreamPath} to ${targetDir}`);
+console.log(`Target dir: ${targetDir}`);
+
 const apiBase = "https://api.github.com";
 const headers = {
   Accept: "application/vnd.github+json",
@@ -68,7 +71,12 @@ async function listDir(owner, repo, dirPath, ref) {
   return gh(`${apiBase}/repos/${owner}/${repo}/contents/${dirPath}?ref=${encodeURIComponent(ref)}`);
 }
 
-async function resolveCommit(owner, repo, ref) {
+async function resolveCommit(owner, repo, dirPath, ref) {
+  const url = `${apiBase}/repos/${owner}/${repo}/commits?path=${encodeURIComponent(dirPath)}&sha=${encodeURIComponent(ref)}&per_page=1`;
+  const res = await gh(url);
+  if (Array.isArray(res) && res.length > 0) {
+    return res[0].sha;
+  }
   return (await gh(`${apiBase}/repos/${owner}/${repo}/commits/${encodeURIComponent(ref)}`)).sha;
 }
 
@@ -160,11 +168,25 @@ async function main() {
   const [owner, repo] = upstreamRepo.split("/");
   if (!owner || !repo) throw new Error(`Invalid UPSTREAM_REPO: ${upstreamRepo}`);
 
+  const targetPath = path.resolve(targetDir);
+  const commit = await resolveCommit(owner, repo, upstreamPath, upstreamRef);
+
+  let existingMeta = null;
+  try {
+    const metaContent = await fs.readFile(path.join(targetPath, ".source.json"), "utf8");
+    existingMeta = JSON.parse(metaContent);
+  } catch {
+    // Existing metadata not found or invalid
+  }
+
+  if (!process.env.FORCE_SYNC && existingMeta && existingMeta.upstream_commit === commit) {
+    console.log(`No changes upstream in ${upstreamRepo} (${commit}). Skipping sync.`);
+    return;
+  }
+
   const wasmPath = new URL("../node_modules/@icyjoseph/mdx2md/mdx2md_wasm_bg.wasm", import.meta.url);
   initSync({ module: readFileSync(wasmPath) });
 
-  const commit = await resolveCommit(owner, repo, upstreamRef);
-  const targetPath = path.resolve(targetDir);
   const parentDir = path.dirname(targetPath);
   const tempDir = await fs.mkdtemp(path.join(parentDir, ".ghost-docs-"));
   const backupDir = `${targetPath}.previous`;
@@ -192,7 +214,7 @@ async function main() {
     try {
       await fs.rename(tempDir, targetPath);
     } catch (error) {
-      await fs.rename(backupDir, targetPath).catch(() => {});
+      await fs.rename(backupDir, targetPath).catch(() => { });
       throw error;
     }
 
