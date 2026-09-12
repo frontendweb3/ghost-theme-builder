@@ -37,7 +37,7 @@ Install the skill from the [ClawHub registry](https://clawhub.ai/frontendweb/ski
 
 ```bash
 # via OpenClaw
-openclaw skills install @frontendweb/ghost-theme-builder
+npx openclaw skills install @frontendweb/ghost-theme-builder
 
 # or via npx
 npx skills add https://clawhub.ai/frontendweb/skills/ghost-theme-builder
